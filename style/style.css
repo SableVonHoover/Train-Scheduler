@@ -192,42 +192,12 @@ ul#menu li a:hover
   margin: 20px auto 0 auto;
   padding: 0 0 10px 0;} 
 
-#sidebar_container
-{ float: left;
-  width: 224px;}
-
-.sidebar_top
-{ width: 222px;
-  height: 14px;
-  background: transparent url(side_top.png) no-repeat;}
-
-.sidebar_base
-{ width: 222px;
-  height: 14px;
-  background: url(side_base.png) no-repeat;}
-
-.sidebar
-{ float: right;
-  width: 222px;
-  padding: 0;
-  margin: 0 0 16px 0;}
-
-.sidebar_item
-{ background: url(side_back.png) repeat-y;
-  padding: 0 15px;
-  width: 192px;}
-
-.sidebar li a.selected
-{ color: #444;} 
-
-.sidebar ul
-{ margin: 0;} 
 
 #content
 { text-align: left;
   width: 620px;
   padding: 0 0 0 5px;
-  float: right;}
+  ;}
   
 #content ul
 { margin: 2px 0 22px 0px;}
@@ -262,12 +232,7 @@ ul#menu li a:hover
 { color: #B48A7C;
   text-decoration: none;}
 
-.search
-{ color: #5D5D5D; 
-  border: 1px solid #BBB; 
-  width: 134px; 
-  padding: 4px; 
-  font: 100% arial, sans-serif;}
+
 
 .form_settings
 { margin: 15px 0 0 0;}
@@ -333,3 +298,15 @@ table tr td
 { background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+/* Custom CSS */
+
+input {
+    width: 70%;
+}
+
+#addTrainArea {
+    display: block;
+    width: 100%;
+
+}

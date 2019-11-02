@@ -7,6 +7,8 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
@@ -21,42 +23,71 @@
         </div>
       </div>
       <div id="menubar">
-        <ul id="menu">
-
-        </ul>
       </div>
     </div>
     <div id="content_header"></div>
-
-
-
   </div>
-  <div id="content">
-    <!-- insert the page content here -->
 
 
+  <div class="container">
 
+    <!--Displaying the Scheduled Trains from Firebase here-->
+    <div class="row">
+      <div class="col-md-12">
+        <div id="trainScheduleArea">
+          <h2>Current Train Schedule</h2>
+          <table id="trainTable" style="width:100%; border-spacing:0;">
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency(min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <hr />
 
+    <!--The Add Train Submission Area-->
+    <div class="row">
+      <div class="col-md-12">
+        <div id="addTrainArea">
+          <h2>Add Train</h2>
 
+          <label>Train Name</label> <br />
+          <input type="text" id="nameInput" /> <br />
 
+          <label>Destination</label> <br />
+          <input type="text" id="destInput" /> <br />
 
+          <label>First Train Time (HH:MM - military time)</label> <br />
+          <input type="text" id="firstTimeInput" /> <br />
 
+          <label>Frequency (min)</label> <br />
+          <input type="text" id="freqInput" /> <br />
 
+          <button class="btn btn-dark" id="submitBtn">Submit</button>
+        </div>
+      </div>
 
-
-
-
-
-
+    </div>
   </div>
   </div>
-  <div id="content_footer"></div>
-  <div id="footer">
-    <p>Copyright &copy; simplestyle_horizon | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
-        href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a
-        href="http://www.html5webtemplates.co.uk">Simple web templates by HTML5</a></p>
   </div>
-  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--This is the connection to the Firebase Database -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <script src="app.js"></script>
+
 </body>
 
 </html>
