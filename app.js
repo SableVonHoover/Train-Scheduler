@@ -1,4 +1,4 @@
-
+//Connection to Firebase Project/Datbase
 var firebaseConfig = {
     apiKey: "AIzaSyBfeD_AwwxpIEgFDT0pglnX884UdptW10A",
     authDomain: "trainscheduler-1e51a.firebaseapp.com",
@@ -21,15 +21,23 @@ $(document).ready(function () {
 
         // let today = new Date();
         // let time = today.getHours() + ":" + today.getMinutes();
+        let firstTime = Snapshot.val().firstTrainTime;
 
+        //Using Moment js to format the firstTime string into time
+        //let goodFirstTime = moment().hours(firstTime.substring(0, 2)).minutes(firstTime.substring(3, 5));
+
+        //Couldn't work out how to do math for these
         let nextArrival = "";
         let minAway = "";
 
 
+        //New row for TrainSchedule table
         var newTrain = $("<tr>").append(
             $("<td>").text(Snapshot.val().trainName),
             $("<td>").text(Snapshot.val().destination),
             $("<td>").text(Snapshot.val().frequency),
+
+            //Couldn't work out how to do math for these
             $("<td>").text(nextArrival),
             $("<td>").text(minAway)
         );
